@@ -1,12 +1,16 @@
 <script setup>
 import { ref } from 'vue'
 
+
 defineProps({
   msg: String,
 })
 
 const count = ref(0)
+
+
 </script>
+
 
 <template>
   <h1>{{ msg }}</h1>
@@ -21,23 +25,24 @@ const count = ref(0)
   <p>
     <input type="text" id="car-name" >
   </p>
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 
+  <div>
+    <label for="dropdown"> </label>
+    <select v-model="selectedFilters" id="dropdown" placeholder="select an option">
+      <option value = "" disabled selected>Select an option</option>
+      <option value="option1"> Option 1</option>
+      <option value="option2"> Option 2</option>
+    </select>  
+    </div>
 </template>
 
 <style scoped>
 .read-the-docs {
   color: #888;
 }
+
+.dropdown {
+  color: whitesmoke;
+}
+
 </style>
