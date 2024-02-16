@@ -3,11 +3,9 @@ CUNY Hack 2024 GitHub Repository
 
 Collaboraters:
 
-Christopher Pawlus  
-Evan Lu
-Derek Ni
-Thomas Huang
+# Christopher Pawlus  
+# Evan Lu
+# Derek Ni
+# Thomas Huang
 
 ## Project
-
-# 
