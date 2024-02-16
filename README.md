@@ -7,5 +7,3 @@ Collaboraters:
 # Evan Lu
 # Derek Ni
 # Thomas Huang
-
-## Project
