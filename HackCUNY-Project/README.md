@@ -9,7 +9,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ## Setup
 
-cd HackCUNY-Projec<br />
+cd HackCUNY-Project<br />
 npm install<br />
 npm run dev<br />
 click the localhost link<br />
