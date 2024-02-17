@@ -1,7 +1,21 @@
 <script setup>
 import { handleError, ref, toHandlerKey } from 'vue'
 import axios from 'axios'
-
+import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth'
+import { useRouter} from "vue-router"
+const router = useRouter();
+const log = ref(false);
+let auth;
+onMounted(()=>{
+  auth = getAuth();
+  onAuthStateChanged(auth, (user)=>{
+    if(user){
+      log.value=true;
+    }else{
+      log.value=false;
+    } 
+  });
+});
 const count = ref(0)
 </script>
 
