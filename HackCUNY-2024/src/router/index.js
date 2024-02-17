@@ -4,12 +4,12 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: "/", component: () => import("../views/Home.vue") },
-        { path: "/register", component: () => import("../views/Register.vue") },
+        { path: "/sign-up", component: () => import("../views/Signup.vue") },
         { path: "/sign-in", component: () => import("../views/Signin.vue") },
         { path: "/feed", component: () => import("../views/Feed.vue") },
         
 
-    ]
+    ],
 });
 
 export default router;

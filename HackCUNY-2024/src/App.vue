@@ -1,8 +1,19 @@
 <script setup>
- //import HelloWorld from './components/HelloWorld.vue'
+import { handleError, ref, toHandlerKey } from 'vue'
+import axios from 'axios'
+
+const count = ref(0)
 </script>
 
 <template>
+  <nav>
+    <router-link to = "/"> Home</router-link> |
+    <router-link to = "/feed"> Feed</router-link> |
+    <router-link to = "/sign-in"> Register</router-link> |
+    <router-link to = "/sign-up"> Login</router-link> | 
+  </nav>
+
+  <router-view />
   <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -45,18 +56,20 @@
         <main class ="main-content">
           <div class = "container">
 
-        <input type="text" id="car-name" v-model=carmake @keyup.enter=searchbar @keyup=SearchChanged(carmake) placeholder = "Car Company">
+          <input type="text" id="car-name" v-model=carmake @keyup.enter="fetchdata" @input="cardata" placeholder = "Car Company" >
+          <ul>
+            <li v-for="(car,i) in cardata" :key="i">
+              <p>Model: {{ car.model }}<br/>
+                Company: {{ car.make }}<br/>
+                Class: {{ car.class }}<br/>
+                Year: {{ car.year }}<br/>
+              </p>
+
+            </li>
+          
+          </ul>
+
         <div class = "cars-container">
-        <ul>cars:
-        <li v-for="(car,i) in cardata" :key="i">
-          <p>
-          model: {{ car.model }}<br/>
-          company: {{ car.make }}<br/>
-          year: {{ car.year }}<br/>
-          cylinders: {{ car.cylinders }}<br/>
-        </p>
-        </li>
-        </ul>
         </div>
         </div>
 
@@ -82,42 +95,28 @@ export default {
   data() {
     return {
       currentContent: 'Home',
+      carmake: '',
+      cardata: []
     };
   },
   methods: {
     changeContent(content) {
       this.currentContent = content;
     },
-  },
-};
-
-import { ref, toHandlerKey } from 'vue'
-import axios from 'axios'
-
-const count = ref(0)
-let search = '';
-let cardata = [];
-function SearchChanged(carmake){
-  this.search = carmake;
+     async fetchdata(){
+      try{
+        const res = await axios.get(`https://api.api-ninjas.com/v1/cars?limit=5&make=${this.carmake}`, {
+         headers: {   'content-type': 'application/json',
+         'X-Api-Key': '13aF+ziMB9pD3sPpHquy2g==QhkZJPnZlcZ5OzwW'}  
+       })
+       this.cardata = res.data; 
+       console.log(res.data);
+      }catch(error) {
+         console.error('Error fetching data:', error);
+     };
+   }
 }
-const headers = {
-  'content-type': 'application/json',
-  'X-Api-Key': '13aF+ziMB9pD3sPpHquy2g==QhkZJPnZlcZ5OzwW'
 };
-function searchbar(){
-    axios.get('https://api.api-ninjas.com/v1/cars?limit=5&make=' + search,{
-      headers: headers
-    })
-    .then(response => {
-      
-    cardata = response.data;
-    console.log(cardata);
-    console.log(cardata[0]);
-    })
-    .catch(error => {
-    console.error('Error fetching data:', error);
-    });
-}
 </script>
 
 
