@@ -23,68 +23,7 @@ const count = ref(0)
     </a>
   </div>
   <HelloWorld msg="Hi" /> -->
-  <div id = "car-website">
-    <section>
-        <header>
-            <nav class="navbar">
-              <!-- Left Side for the logo and name-->
-              <div class="Logo">
-                <a href="../src/HelloWorld.vue" rel="Links to main page" >
-                  <img src="../src/pictures/4fingers.png" alt="Logo">
-                </a>
-              </div>
 
-              <!-- Right side for login-->
-              <div class="Login">
-                <a href="../src/components/HelloWorld.vue" rel="Testing Link">
-                  <img src="../src/pictures/keshi.jpg" alt="Login">
-                </a>
-              </div>
-            </nav>
-        </header>
-    </section>
-        <aside class="sidebar">
-          <ul>
-              <li @click = "changeContent('Home')"> Home</li>
-              <li @click = "changeContent('About')"> About</li>
-              <li @click = "changeContent('Questions')"> Questions</li>              
-              <li @click = "changeContent('Profile')"> Profile</li>
-              <li @click = "changeContent('Information')"> More Information</li>               
-          </ul>
-        </aside>
-
-        <main class ="main-content">
-          <div class = "container">
-
-          <input type="text" id="car-name" v-model=carmake @keyup.enter="fetchdata" @input="cardata" placeholder = "Car Company" >
-          <ul>
-            <li v-for="(car,i) in cardata" :key="i">
-              <p>Model: {{ car.model }}<br/>
-                Company: {{ car.make }}<br/>
-                Class: {{ car.class }}<br/>
-                Year: {{ car.year }}<br/>
-              </p>
-
-            </li>
-          </ul>
-        </div>
-
-
-
-          <div>
-            <label for="dropdown"> </label>
-            <select v-model="selectedFilters" id="dropdown">
-              <option value = "" disabled selected> Select an option</option>
-              <option value="option1"> Option 1</option>
-              <option value="option2"> Option 2</option>
-            </select>  
-          </div> 
-
-          <div>
-            <p> AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-          </div>
-        </main>
-  </div>
 </template>
 
 <script>
