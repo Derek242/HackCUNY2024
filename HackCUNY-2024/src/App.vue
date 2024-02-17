@@ -1,5 +1,5 @@
 <script setup>
-import { handleError, ref, toHandlerKey } from 'vue'
+import { handleError, ref, toHandlerKey, onMounted } from 'vue'
 import axios from 'axios'
 import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth'
 import { useRouter} from "vue-router"
@@ -20,14 +20,11 @@ const count = ref(0)
 </script>
 
 <template>
-  <nav>
-    <router-link to = "/"> Home</router-link> |
-    <router-link to = "/feed"> Feed</router-link> |
-    <router-link to = "/sign-up"> Register</router-link> |
-    <router-link to = "/sign-in"> Login</router-link> | 
-  </nav>
+  <div id="app">
+    <Navbar/>
+    <router-view/>
+  </div>
 
-  <router-view />
   <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -39,6 +36,8 @@ const count = ref(0)
   <HelloWorld msg="Hi" /> -->
 
 </template>
+
+
 
 <script>
 export default {
@@ -62,17 +61,15 @@ export default {
        this.cardata = res.data; 
        console.log(res.data);
       }catch(error) {
-         console.error('Error fetching data:', error);
-     };
-   }
-}
+        console.error('Error fetching data:', error);
+      };
+    }
+  }
 };
 </script>
 
 
 <style scoped>
-
-
 header {
   margin-bottom: 20px;
   display: block;
