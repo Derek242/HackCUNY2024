@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-
+import { ref, toHandlerKey } from 'vue'
+import axios from 'axios'
 
 defineProps({
   msg: String,
@@ -8,7 +8,21 @@ defineProps({
 
 const count = ref(0)
 
-
+const headers = {
+  'content-type': 'application/json',
+  'X-Api-Key': '13aF+ziMB9pD3sPpHquy2g==QhkZJPnZlcZ5OzwW'
+};
+function search(){
+    axios.get('https://api.api-ninjas.com/v1/cars?limit=5&model=camry',{
+      headers: headers
+    })
+    .then(response => {
+    console.log(response.data);
+    })
+    .catch(error => {
+    console.error('Error fetching data:', error);
+    });
+}
 </script>
 
 
@@ -23,7 +37,7 @@ const count = ref(0)
     </p>
   </div>
   <p>
-    <input type="text" id="car-name" >
+    <input type="text" id="car-name" v-model=carname @keyup.enter=search>
   </p>
 
   <div>
