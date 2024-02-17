@@ -1,5 +1,5 @@
 <script setup>
-// import HelloWorld from './components/HelloWorld.vue'
+ //import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -43,9 +43,23 @@
         </aside>
 
         <main class ="main-content">
-          <div>
-            <input type="text" id="car-name" v-model=carname @keyup.enter=search>
-          </div>
+          <div class = "container">
+
+        <input type="text" id="car-name" v-model=carmake @keyup.enter=searchbar @keyup=SearchChanged(carmake) placeholder = "Car Company">
+        <div class = "cars-container">
+        <ul>cars:
+        <li v-for="(car,i) in cardata" :key="i">
+          <p>
+          model: {{ car.model }}<br/>
+          company: {{ car.make }}<br/>
+          year: {{ car.year }}<br/>
+          cylinders: {{ car.cylinders }}<br/>
+        </p>
+        </li>
+        </ul>
+        </div>
+        </div>
+
 
           <div>
             <label for="dropdown"> </label>
@@ -76,9 +90,35 @@ export default {
     },
   },
 };
+
+import { ref, toHandlerKey } from 'vue'
+import axios from 'axios'
+
+const count = ref(0)
+let search = '';
+let cardata = [];
+function SearchChanged(carmake){
+  this.search = carmake;
+}
+const headers = {
+  'content-type': 'application/json',
+  'X-Api-Key': '13aF+ziMB9pD3sPpHquy2g==QhkZJPnZlcZ5OzwW'
+};
+function searchbar(){
+    axios.get('https://api.api-ninjas.com/v1/cars?limit=5&make=' + search,{
+      headers: headers
+    })
+    .then(response => {
+      
+    cardata = response.data;
+    console.log(cardata);
+    console.log(cardata[0]);
+    })
+    .catch(error => {
+    console.error('Error fetching data:', error);
+    });
+}
 </script>
-
-
 
 
 <style scoped>
