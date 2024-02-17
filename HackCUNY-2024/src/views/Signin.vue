@@ -1,10 +1,10 @@
 <template>
     <h1>Login</h1>
-    <p><input type ="text" placeholder ="Email" v-model="email"/> </p>
-    <p><input type = "password" placeholder ="Password" v-model="password"/> </p>
+    <input type ="text" placeholder ="Email" v-model="email"/> 
+    <input type = "password" placeholder ="Password" v-model="password"/> 
     <p v-if="errMsg">{{  errMsg }}</p>
-    <p><button @click="reg">Sign in</button></p>
-    <p><button @click="Google">Sign up with google</button></p>
+    <button @click="reg">Sign in</button>
+    <button @click="Google">Sign up with google</button>
 </template>
 
 <script setup>
@@ -32,3 +32,8 @@ const register = () => {
     })
 }
 </script>
+
+<style>
+    
+
+</style>

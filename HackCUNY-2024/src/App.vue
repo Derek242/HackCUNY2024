@@ -1,4 +1,5 @@
 <script setup>
+import Navbar from './components/Navbar.vue'
 import { handleError, ref, toHandlerKey, onMounted } from 'vue'
 import axios from 'axios'
 import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth'
@@ -36,8 +37,6 @@ const count = ref(0)
   <HelloWorld msg="Hi" /> -->
 
 </template>
-
-
 
 <script>
 export default {
