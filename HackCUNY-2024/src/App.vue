@@ -68,19 +68,6 @@ const count = ref(0)
             </li>
           
           </ul>
-
-        <div class = "cars-container">
-        <ul>cars: 
-        <li v-for="(car,i) in cardata" :key="i">
-          <p>
-          Model: {{ car.model }}<br/>
-          Company: {{ car.make }}<br/>
-          Year: {{ car.year }}<br/>
-          Class: {{ car.class }}<br/>
-        </p>
-        </li>
-        </ul>
-        </div>
         </div>
 
 
