@@ -28,16 +28,16 @@ const count = ref(0)
         <header>
             <nav class="navbar">
               <!-- Left Side for the logo and name-->
-              <div>
-                <a href="../src/HelloWorld.vue" rel="Links to main page" class="Logo">
+              <div class="Logo">
+                <a href="../src/HelloWorld.vue" rel="Links to main page" >
                   <img src="../src/pictures/4fingers.png" alt="Logo">
                 </a>
               </div>
 
               <!-- Right side for login-->
-              <div>
-                <a href="../src/components/HelloWorld.vue" rel="Testing Link" class="Login">
-                  <img src="" alt="Login">
+              <div class="Login">
+                <a href="../src/components/HelloWorld.vue" rel="Testing Link">
+                  <img src="../src/pictures/keshi.jpg" alt="Login">
                 </a>
               </div>
             </nav>
@@ -70,6 +70,16 @@ const count = ref(0)
           </ul>
 
         <div class = "cars-container">
+        <ul>cars: 
+        <li v-for="(car,i) in cardata" :key="i">
+          <p>
+          Model: {{ car.model }}<br/>
+          Company: {{ car.make }}<br/>
+          Year: {{ car.year }}<br/>
+          Class: {{ car.class }}<br/>
+        </p>
+        </li>
+        </ul>
         </div>
         </div>
 
@@ -121,45 +131,36 @@ export default {
 
 
 <style scoped>
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-} 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+/* #car-website {
+
 } */
 
-#car-website {
-  display: flex;
-}
 header {
   margin-bottom: 20px;
   display: block;
   justify-content: space-between;
   padding: 20px;
-  flex-direction: row;
+  display: flex;
 }
-.Logo {
-  display: flex; 
-  align-items: center;
+.Logo, .Login{
   
 }
 
-.Logo img {
-  max-width: 30px;
+.Logo img, .Login img {
+  max-width: 25%;
   height: auto;
-  margin-right: 30px;
+  margin-right: 25%;
 }
+
 
 .navbar {
   background-color: #333;
   color: white;
   padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .navbar ul {
