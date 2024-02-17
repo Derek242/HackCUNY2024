@@ -9,13 +9,13 @@
 
 <script setup>
 import {ref} from "vue";
-import {getAuth, createUserEmailAndPassword} from "firebase/auth";
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 import {useRouter} from 'vue-router'
 const email = ref("");
-const pw = ref("");
+const password = ref("");
 const router = useRouter()
 const reg = () => {
-    createUserEmailAndPassword(getAuth(), email.value,pw.value)
+    createUserWithEmailAndPassword(getAuth(), email.value,password.value)
     .then((data)=>{
         console.log("Successful");
         router.push('/feed')

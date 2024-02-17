@@ -9,8 +9,8 @@ const count = ref(0)
   <nav>
     <router-link to = "/"> Home</router-link> |
     <router-link to = "/feed"> Feed</router-link> |
-    <router-link to = "/sign-in"> Register</router-link> |
-    <router-link to = "/sign-up"> Login</router-link> | 
+    <router-link to = "/sign-up"> Register</router-link> |
+    <router-link to = "/sign-in"> Login</router-link> | 
   </nav>
 
   <router-view />
@@ -66,9 +66,9 @@ const count = ref(0)
               </p>
 
             </li>
-          
           </ul>
         </div>
+
 
 
           <div>
@@ -119,9 +119,6 @@ export default {
 
 <style scoped>
 
-/* #car-website {
-
-} */
 
 header {
   margin-bottom: 20px;
