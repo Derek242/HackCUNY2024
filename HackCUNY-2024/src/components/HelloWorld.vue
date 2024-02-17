@@ -27,36 +27,37 @@ function search(){
 
 
 <template>
-  <h1>{{ msg }}</h1>
+  <!-- <h1>{{ msg }}</h1> -->
 
-  <div class="card">
+  <!-- <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
     </p>
-  </div>
+  </div> -->
+<!-- 
   <p>
     <input type="text" id="car-name" v-model=carname @keyup.enter=search>
-  </p>
-
+  </p> -->
+<!-- 
   <div>
     <label for="dropdown"> </label>
-    <select v-model="selectedFilters" id="dropdown" placeholder="select an option">
-      <option value = "" disabled selected>Select an option</option>
+    <select v-model="selectedFilters" id="dropdown">
+      <option value = "" disabled selected> Select an option</option>
       <option value="option1"> Option 1</option>
       <option value="option2"> Option 2</option>
     </select>  
-    </div>
+    </div> -->
 </template>
 
 <style scoped>
-.read-the-docs {
+/* .read-the-docs {
   color: #888;
 }
 
 .dropdown {
   color: whitesmoke;
-}
+} */
 
 </style>
