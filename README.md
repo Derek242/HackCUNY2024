@@ -1,5 +1,5 @@
-# CunyHack2024
-CUNY Hack 2024 GitHub Repository
+# HackCuny2024
+Hack Cuny 2024 GitHub Repository
 
 Collaboraters:
 
