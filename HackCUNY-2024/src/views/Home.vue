@@ -3,8 +3,8 @@
       <div v-for="(slide, index) in slides" :key="index" class="carousel-item" :class="{ active: index === activeIndex }"> 
         <div class="slide-image" :style="{ 'background-image': 'url(' + slide.imageUrl + ')' }"></div> 
       </div> 
-      <button @click="goToPreviousSlide"><</button>
-      <button @click="goToNextSlide">></button>
+      <button @click="goToPreviousSlide">◀</button>
+      <button @click="goToNextSlide">▶</button>
     </div> 
     <h2>Car List:</h2>
     <div class ="container-car">
@@ -14,18 +14,13 @@
       <ul class = "nobulletpoint">
           <li v-for="(car,i) in cardata" :key="i">
             <div class = car-card>
-            Model: {{ car.model }}<br/>
-              City_mgp: {{ car.city_mpg }}<br/>
-              Combination_mpg: {{ car.combination_mpg }}<br/>
               Company: {{ car.make }}<br/>
-              Class: {{ car.class }}<br/>
-              Cylinders: {{ car.Cylinders }}<br/>
-              fuel: {{ car.fuel_type }}<br/>
-              Highway_mpg: {{ car.highway_mpg }}<br/>
+              Model: {{ car.model }}<br/>
               Year: {{ car.year }}<br/>
-
-        </div>
-            
+              Highway(Miles): {{ car.highway_mpg }}<br/>
+              City(Miles): {{ car.city_mpg }}<br/>
+              Fuel: {{ car.fuel_type }}<br/>
+            </div>
           </li>
       </ul>
     </div>
