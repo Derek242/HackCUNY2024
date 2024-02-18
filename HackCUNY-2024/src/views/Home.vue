@@ -34,10 +34,11 @@ import axios from 'axios'
     data() {
       return {
         slides: [
-          { imageUrl: 'https://media.istockphoto.com/id/1478431022/photo/cars-for-sale-stock-lot-row.jpg?s=1024x1024&w=is&k=20&c=9Ia8cojAjkfVgft22bC_pt5NDko-_pWIu4JOYsjnAuY=' },
-          { imageUrl: 'https://media.istockphoto.com/id/1562275869/photo/3d-rendering-of-a-brand-less-generic-concept-car.jpg?s=1024x1024&w=is&k=20&c=RuZr1eHCzn6u5CpI0dnLfhH4Sj4TocL7xEopqEKBaFQ='},
-          { imageUrl: 'https://media.istockphoto.com/id/1562295342/photo/3d-rendering-of-a-brand-less-generic-concept-car.jpg?s=1024x1024&w=is&k=20&c=mJHXzxzvxTWMEtTV1zNTKOGhi4cSprR-UHQ-Uv7COMU=' },
-          { imageUrl: 'https://media.istockphoto.com/id/1286476808/photo/gray-sportscar-driving-on-a-road.jpg?s=1024x1024&w=is&k=20&c=INNemsW_dSTDu0atV_boosblJwRZZoaRPwq13iNKqB8=' }
+          { imageUrl: 'https://i.pinimg.com/736x/a6/5d/02/a65d02f689abc1dfddb2471b153da6eb.jpg' },
+          { imageUrl: 'https://i.pinimg.com/736x/9f/c2/3e/9fc23e2193f8875f28be1601c242820c.jpg'},
+          { imageUrl: 'https://i.pinimg.com/564x/8f/66/e2/8f66e2f30f9f5623aa8fc00289f7c5c6.jpg' },
+          { imageUrl: 'https://i.pinimg.com/564x/85/ae/16/85ae16a27efcc21572fba9e80ac86915.jpg' }, 
+          { imageUrl: 'https://i.pinimg.com/736x/0e/c3/56/0ec356d606c201944a70bfd002c2e69b.jpg' }
         ],
         activeIndex: 0,
         intervalId: null,
