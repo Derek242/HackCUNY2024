@@ -53,6 +53,7 @@
     color: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     z-index: 1;
 }
 
@@ -62,8 +63,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */}
+    align-items: center; /* Center items horizontally */ /* Center items vertically */}
 
 
 .sidebar a {
@@ -91,15 +91,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    width: 15vh; 
-    height: 15vh; 
+    width: 13vh; 
+    height: 13vh; 
     z-index: 100%;
     max-width: 20vh;
     transition: transform .25s;
+
 }
 
 .about-image:hover, .contact-image:hover, .home-image:hover, .register-image:hover, .login-image:hover{
     transform:scale(1.1);
-
 }
 </style>
