@@ -44,7 +44,7 @@
 
 .sidebar {
     background-color: #E8E8E8;
-    padding: 2%;
+    padding: 1%;
     position: fixed;
     left: 0;
     top: 80px;
