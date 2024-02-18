@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
+import SideBar from './components/SideBar.vue'
 import { handleError, ref, toHandlerKey, onMounted } from 'vue'
 import axios from 'axios'
 import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth'
@@ -23,6 +24,7 @@ const count = ref(0)
 <template>
   <div id="app">
     <Navbar/>
+    <SideBar/>
     <router-view/>
   </div>
 
