@@ -6,8 +6,16 @@
     <ul>
         <li v-for="(car,i) in cardata" :key="i">
           <p>Model: {{ car.model }}<br/>
+            City_mgp: {{ car.city_mpg }}<br/>
+            Combination_mpg: {{ car.combination_mpg }}<br/>
             Company: {{ car.make }}<br/>
             Class: {{ car.class }}<br/>
+            Cylinders: {{ car.Cylinders }}<br/>
+            Displacement: {{ car.displacement }}<br/>
+            Drive: {{ car.drive }}<br/>
+            fuel: {{ car.fuel_type }}<br/>
+            Highway_mpg: {{ car.highway_mpg }}<br/>
+            Transmission: {{ car.transmission }}<br/>
             Year: {{ car.year }}<br/>
           </p>
 
@@ -30,7 +38,7 @@ export default {
   methods: {
      async fetchdata(){
       try{
-        const res = await axios.get(`https://api.api-ninjas.com/v1/cars?limit=5&make=${this.carmake}`, {
+        const res = await axios.get(`https://api.api-ninjas.com/v1/cars?limit=8&make=${this.carmake}`, {
          headers: {   'content-type': 'application/json',
          'X-Api-Key': '13aF+ziMB9pD3sPpHquy2g==QhkZJPnZlcZ5OzwW'}  
        })
