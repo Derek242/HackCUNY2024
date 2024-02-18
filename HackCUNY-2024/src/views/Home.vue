@@ -6,14 +6,15 @@
       <button @click="goToPreviousSlide"><</button>
       <button @click="goToNextSlide">></button>
     </div> 
-
-    <div class ="too">
+    <h2>Car List:</h2>
+    <div class ="container-car">
       <input type="text" id="car-name" v-model="carmake" @keyup.enter="fetchdata" @input="cardata" placeholder = "Car Company" >
   
-      <h2></h2>
-      <ul>
+      <div class = "car-list">
+      <ul class = "nobulletpoint">
           <li v-for="(car,i) in cardata" :key="i">
-            <p>Model: {{ car.model }}<br/>
+            <div class = car-card>
+            Model: {{ car.model }}<br/>
               City_mgp: {{ car.city_mpg }}<br/>
               Combination_mpg: {{ car.combination_mpg }}<br/>
               Company: {{ car.make }}<br/>
@@ -25,10 +26,12 @@
               Highway_mpg: {{ car.highway_mpg }}<br/>
               Transmission: {{ car.transmission }}<br/>
               Year: {{ car.year }}<br/>
-            </p>
+
+        </div>
             
           </li>
       </ul>
+    </div>
     </div>
   </template>
 
@@ -94,14 +97,45 @@ import axios from 'axios'
 * { 
     box-sizing: border-box; 
 } 
-.too{
-    margin-left:100px;
-    margin-top:150px;
+.nobulletpoint{
+    /* Good */
+    list-style-type:none;
+}
+.nobulletpoint li{
+    /* Good */
+
+    display:inline-block;
+    margin:10px;
+
+}
+.container-car{
+    /* Good */
+
     display:flex;
-    align-items: center;
+    align-items: start;
     text-align:center;
-    justify-content: center;
+    justify-content: start;
+    height:1000px;
   }
+.container-car input{
+
+    display:flex;
+    align-items:center;
+
+}
+.car-card{
+    display:flex;
+    flex-direction: row;
+    background-color: #DCD0A5;
+    padding:10px;
+    border-radius:20px;
+    box-shadow:8px 4px 2px 2px rgba(0,0,0,.2);
+    flex-wrap: wrap;
+    max-width:225px;
+    
+}
+
+
 template { 
     display: flex; 
     justify-content: center; 
