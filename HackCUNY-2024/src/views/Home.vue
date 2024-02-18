@@ -8,9 +8,9 @@
     </div> 
 
     <div class ="too">
-      <input type="text" id="car-name" v-model=carmake @keyup.enter="fetchdata" @input="cardata" placeholder = "Car Company" >
+      <input type="text" id="car-name" v-model="carmake" @keyup.enter="fetchdata" @input="cardata" placeholder = "Car Company" >
   
-      <h2>teASFASDst</h2>
+      <h2></h2>
       <ul>
           <li v-for="(car,i) in cardata" :key="i">
             <p>Model: {{ car.model }}<br/>
@@ -26,7 +26,7 @@
               Transmission: {{ car.transmission }}<br/>
               Year: {{ car.year }}<br/>
             </p>
-  
+            
           </li>
       </ul>
     </div>
@@ -56,6 +56,18 @@ import axios from 'axios'
       this.startCarousel();
     },
     methods: {
+        async fetchdata(){
+      try{
+        const res = await axios.get(`https://api.api-ninjas.com/v1/cars?limit=100&make=${this.carmake}`, {
+         headers: {   'content-type': 'application/json',
+         'X-Api-Key': '13aF+ziMB9pD3sPpHquy2g==QhkZJPnZlcZ5OzwW'}  
+       })
+       this.cardata = res.data; 
+       console.log(res.data);
+      }catch(error) {
+        console.error('Error fetching data:', error);
+      };
+        },
       startCarousel() {
         this.intervalId = setInterval(() => {
           this.activeIndex = (this.activeIndex + 1) % this.slides.length;
@@ -74,18 +86,6 @@ import axios from 'axios'
     beforeDestroy() {
       this.stopCarousel();
     },
-    async fetchdata(){
-      try{
-        const res = await axios.get(`https://api.api-ninjas.com/v1/cars?limit=8&make=${this.carmake}`, {
-         headers: {   'content-type': 'application/json',
-         'X-Api-Key': '13aF+ziMB9pD3sPpHquy2g==QhkZJPnZlcZ5OzwW'}  
-       })
-       this.cardata = res.data; 
-       console.log(res.data);
-      }catch(error) {
-        console.error('Error fetching data:', error);
-      };
-    }
   };
 </script>
 
