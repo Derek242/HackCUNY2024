@@ -66,8 +66,8 @@ template {
     height: 260px; 
     overflow: hidden; 
     background-color: #cdcdcd; 
-    top: 80px;
-    left: 130px;
+    top: 30px;
+    left: 100px;
 } 
   
 .carousel-item .slide-image { 
@@ -117,6 +117,11 @@ button {
 }
 
 body {
+    margin-left: 50px;
+    margin-top: 80px;
+    margin-left: 50px;
     height: 1000px;
 }
+
+
 </style>
