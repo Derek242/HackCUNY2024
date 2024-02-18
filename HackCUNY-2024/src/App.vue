@@ -18,6 +18,11 @@ onMounted(()=>{
     } 
   });
 });
+const handleSignOut = () =>{
+  signOut(auth).then(()=>{
+    router.push("/");
+  });
+}
 const count = ref(0)
 </script>
 

@@ -14,16 +14,16 @@
             </div>
             <div class = "Pictures">
                 <a href="https://www.linkedin.com/in/elu1">
-                <img src="../assets/test.png" alt="Evan Lu">
+                <img src="../assets/Linkedin/Evan.jpeg" alt="Evan Lu">
                 </a>
                 <a href="https://www.linkedin.com/in/derekni">
-                    <img src="../assets/test.png"  alt="Derek Ni">
+                    <img src="../assets/Linkedin/Derek.jpeg"  alt="Derek Ni">
                 </a>
                 <a href="https://www.linkedin.com/in/thomashuang0">
-                <img src="../assets/test.png"  alt="Thomas Huang">
+                <img src="../assets/Linkedin/Thomas.jpeg"  alt="Thomas Huang">
                 </a>
                 <a href="https://www.linkedin.com/in/christopher-pawlus-843607294">
-                <img src="../assets/test.png" alt="Christopher Pawlus">
+                <img src="../assets/Linkedin/Chris.PNG" alt="Christopher Pawlus">
                 </a>
             </div>
             <div class = "about-text">
@@ -33,9 +33,8 @@
                 <p>Christopher <br/>Pawlus</p>
             </div>
             <div class = "github">
-
                 <a href="https://www.github.com/Derek242/HackCUNY2024">
-                    <img src="../assets/test.png" alt="github">
+                    <img src="../assets/Github.png" alt="github">
                 </a>
             </div>
 
@@ -94,13 +93,15 @@
         justify-content: space-between;
     
     }
-    img{
+    .Pictures img{
         transition: transform .25s;
         box-shadow: 8px 4px 2px 1px rgba(0,0,0,.2);
         margin-bottom:25px;
+        width:200px;
+        height:200px;
 
     }
-    img:hover {
+    .Pictures img:hover {
         transform:scale(1.5);
 
     }
@@ -112,11 +113,11 @@
         width:auto;
         font-size:26px;
     }
-    .github{
+    .github img{
         display:flex;
         justify-content: end;
         align-items: end;
-        width:auto;
-
+        width: 100px;
+  
     }
 </style>
