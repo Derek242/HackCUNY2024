@@ -17,6 +17,9 @@
             Highway_mpg: {{ car.highway_mpg }}<br/>
             Transmission: {{ car.transmission }}<br/>
             Year: {{ car.year }}<br/>
+            
+            <a :href="('https://www.google.com/search?q=')" target = "_blank" >
+            test</a>
           </p>
 
         </li>
@@ -32,7 +35,8 @@ export default {
   data() {
     return {
       carmake: '',
-      cardata: this.cardata
+      cardata: this.cardata,
+      url: 'https://www.google.com/search?q=',
     };
   },
   methods: {
@@ -48,7 +52,7 @@ export default {
         console.error('Error fetching data:', error);
       };
     }
-  }
+  },
 };
 </script>
 
