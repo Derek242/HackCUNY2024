@@ -29,7 +29,7 @@
             <router-link to = "/sign-in"> 
                 <img src="../assets/Sidebar/login.png" alt="" class ="login-image"/>
                 Login
-            </router-link>
+            </router-link>  
         </div>
     </aside>
 </template>
@@ -95,7 +95,11 @@
     height: 15vh; 
     z-index: 100%;
     max-width: 20vh;
-
+    transition: transform .25s;
 }
 
+.about-image:hover, .contact-image:hover, .home-image:hover, .register-image:hover, .login-image:hover{
+    transform:scale(1.1);
+
+}
 </style>
