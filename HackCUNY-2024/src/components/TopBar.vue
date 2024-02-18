@@ -1,31 +1,18 @@
 <template>
-  <aside class="topBar">
+  <div class="topBar">
     <div class="brand">
-      <div class="logo">
-      </div>
-      <div class="appName">
-        <img src="" alt="Logo Picture" class ="logo-image"/>
-            <router-link to = "/home"></router-link>
-        <h1>CarSearch</h1>
-      </div>
+      <img class="logo" src="../assets/pngwing.com.png" alt="logo"/>
+      <h1 class="title">Automobile Search</h1>
    </div>
-  </aside>
+  </div>
 </template>
 
-<script>
-
-</script>
 
 <style>
-#aside{
-  display: flex;
-  flex-direction: row;
-}
 
 .topBar {
     background-color: gray;
     border-bottom: solid;
-    padding: 2%;
     position: fixed;
     top: 0;
     left: 0;
@@ -34,11 +21,24 @@
     z-index: 200;
 }
 
-.logo-image {
-  width: 10%;
-  height: 10%;
-  max-height: 100vh;
-  max-width: 100hv;
-  background-color: black;
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 4px;
+}
+
+.logo {
+  width: 12vh;
+  height: 9vh;
+  margin-right: 30px;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+
 </style>

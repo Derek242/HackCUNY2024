@@ -7,7 +7,7 @@
         </div>
         <p v-if="errMsg">{{  errMsg }}</p>
         <div class="button-container">
-            <button @click="reg">Sign in</button>
+            <button @click="login">Sign in</button>
             <button @click="Google">Sign up with google</button>
         </div>
     </div>
@@ -15,7 +15,7 @@
 
 <script setup>
 import { ref} from "vue";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword,GoogleAuthProvider,signInWithPopup } from "firebase/auth";
 import { useRouter } from 'vue-router'
 
 const email = ref("");
@@ -23,18 +23,33 @@ const password = ref("");
 const errMsg = ref();
 const router = useRouter();
 
-const register = () => {
+const login = () => {
     const auth = getAuth();
     signInWithEmailAndPassword(auth,email.value,password.value)
     .then((data)=>{
-        console.log(data)
         console.log("Successful")
-        console.log(auth.currentUser)
-        router.push('/feed')
+        router.push('/home')
     })
     .catch((error)=>{
         console.log(error)
-        errMsg.value="Invalid email or password";
+        switch (error.code){
+            case "auth/user-not-found":
+                errMsg.value = "No account found";
+                break;   
+            default :
+                errMsg.value="Invalid email or password";
+                break;
+        }
+    })
+}
+const Google = () =>{
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(getAuth(),provider)
+    .then((result)=>{
+        console.log(result.user);
+    })
+    .catch((error)=>{
+        
     })
 }
 </script>
