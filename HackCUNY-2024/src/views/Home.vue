@@ -3,8 +3,8 @@
       <div v-for="(slide, index) in slides" :key="index" class="carousel-item" :class="{ active: index === activeIndex }"> 
         <div class="slide-image" :style="{ 'background-image': 'url(' + slide.imageUrl + ')' }"></div> 
       </div> 
-      <button @click="goToPreviousSlide">Previous</button>
-      <button @click="goToNextSlide">Next</button>
+      <button @click="goToPreviousSlide"><</button>
+      <button @click="goToNextSlide">></button>
     </div> 
 </template>
   
@@ -61,6 +61,8 @@ template {
 } 
   
 .carousel { 
+    display: flex;
+    flex-direction: row;
     position: relative; 
     width: 570px; 
     height: 260px; 
@@ -68,6 +70,9 @@ template {
     background-color: #cdcdcd; 
     top: 30px;
     left: 100px;
+    justify-content: space-between;
+    align-items: center;
+    
 } 
   
 .carousel-item .slide-image { 
@@ -114,6 +119,7 @@ template {
 /*Button */
 button {
     position: relative;
+    height: 50px;
 }
 
 body {
@@ -122,6 +128,5 @@ body {
     margin-left: 50px;
     height: 1000px;
 }
-
 
 </style>
