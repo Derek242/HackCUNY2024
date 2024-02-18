@@ -19,7 +19,7 @@
     left: 0;
     right: 0;
     height: 12vh;
-    z-index: 200;
+    z-index: 2;
 }
 /* button{
   z-index:100%;

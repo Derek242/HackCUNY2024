@@ -54,10 +54,10 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 8px 4px 2px 1px rgba(0,0,0,.2);
     }
     .container{
         max-width:900px;
+        min-height: 10000px;
 
     }
     .head{

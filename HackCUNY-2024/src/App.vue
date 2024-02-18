@@ -21,7 +21,7 @@ onMounted(()=>{
 });
 const handleSignOut = () =>{
   signOut(auth).then(()=>{
-    router.push("/home");
+    router.push("/signup");
   });
 }
 const count = ref(0)
@@ -75,9 +75,23 @@ body {
   margin: 0 0 0 20vh;
   background-color: #DCD0C0;
 }
+
+
   .signoutbutton {
-    z-index:200%;
-    position:fixed;
-    left:0;
+    z-index: 3;
+    position: absolute;
+    margin-right: auto;
+    top: 20px;
+    right: 5vh;
+
   }
+
+.signoutbutton button{
+    border-radius: 10%;
+    background-color: beige;
+    border-color: 2%;
+    padding: 1%;
+    font-size: 3vh;
+    width: 10vh;
+}
 </style>

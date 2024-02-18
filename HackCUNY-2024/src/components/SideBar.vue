@@ -53,7 +53,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    z-index: 200px;
+    z-index: 1;
 }
 
 .sidebar div{

@@ -55,7 +55,10 @@
           more user interactivity, services, etc.
       </p>
     </div>
-  </div>  
+
+    <div class="infinite"></div>
+
+  </div>    
 </template>
 
 
@@ -72,7 +75,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 8px 4px 2px 1px rgba(0,0,0,.2);
     }
 
 .sections {
@@ -87,13 +89,11 @@
   margin-bottom: 20px;
 
 }
-/* 
-.sections p {
-  
-} */
 
-.container{
+
+.infinite{
     max-width:900px;
+
 }
   
 </style>
