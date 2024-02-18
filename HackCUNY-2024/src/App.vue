@@ -69,7 +69,7 @@ export default {
 
 body {
   margin: 0 0 0 20vh;
-
+  background-color: #DCD0C0;
 }
 
 </style>

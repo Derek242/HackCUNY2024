@@ -43,7 +43,7 @@
 }
 
 .sidebar {
-    background-color: gray;
+    background-color: #E8E8E8;
     padding: 2%;
     position: fixed;
     left: 0;
@@ -57,7 +57,7 @@
 }
 
 .sidebar div{
-    border-bottom: 1px solid white;    
+    border-bottom: 1px solid black;    
     overflow: hidden;
     color: white;
     display: flex;
@@ -75,10 +75,9 @@
     padding: 10%;
     justify-content: center;
     display: block; */
-
-text-decoration: none;
+    text-decoration: none;
   text-align: center;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center; /* Center items horizontally */
