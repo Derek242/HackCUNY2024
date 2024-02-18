@@ -17,7 +17,7 @@ Hack Cuny 2024 GitHub Repository Project
 ## Authors
 
 Contributors and their Information:
-# Christopher Pawlus [@Christpher Pawlus]()
-# Derek Ni [@Derek Ni]()
-# Evan Lu [@Evan Lu]()
-# Thomas Huang [@Thomas Huang]()
+### Christopher Pawlus [@Christpher Pawlus](https://www.linkedin.com/in/christopher-pawlus-843607294/)
+### Derek Ni [@Derek Ni](https://www.linkedin.com/in/derekni/)
+### Evan Lu [@Evan Lu](https://www.linkedin.com/in/elu1/)
+### Thomas Huang [@Thomas Huang](https://www.linkedin.com/in/thomashuang0/)
