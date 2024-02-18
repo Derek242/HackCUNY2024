@@ -8,10 +8,10 @@ Hack Cuny 2024 GitHub Repository Project
 ## Dependencies
 
 ### Need to install Node.js (20.11.1 LTS):
-<br>cd HackCUNY-Project<br>
-<br>npm install
-<br>npm run dev
-<br>click the localhost link
+<be> 1.cd HackCUNY-Project
+<be> 2.npm install
+<be> 3.npm run dev
+<be> 4.click the localhost link
 
 
 ## Authors
