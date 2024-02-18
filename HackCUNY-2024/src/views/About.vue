@@ -1,3 +1,122 @@
+<script>
+</script>
+
 <template>
-  RAHHH
+    <div class = "page">
+        <div class = "container">
+            <div class = head>About </div>
+            <div class = "text">
+
+                <p>
+                    This website allows you to browse vehicles to ur best interest. <br/>
+                    In this project we used: Google firebase, Vite, Vue, cars API from api ninja. 
+                </p>
+            </div>
+            <div class = "Pictures">
+                <a href="https://www.linkedin.com/in/elu1">
+                <img src="../assets/test.png" alt="Evan Lu">
+                </a>
+                <a href="https://www.linkedin.com/in/derekni">
+                    <img src="../assets/test.png"  alt="Derek Ni">
+                </a>
+                <a href="https://www.linkedin.com/in/thomashuang0">
+                <img src="../assets/test.png"  alt="Thomas Huang">
+                </a>
+                <a href="https://www.linkedin.com/in/christopher-pawlus-843607294">
+                <img src="../assets/test.png" alt="Christopher Pawlus">
+                </a>
+            </div>
+            <div class = "about-text">
+                <p>Evan <br/> Lu</p>
+                <p>Derek <br/>Ni</p>
+                <p>Thomas <br/>Huang</p>
+                <p>Christopher <br/>Pawlus</p>
+            </div>
+            <div class = "github">
+
+                <a href="https://www.github.com/Derek242/HackCUNY2024">
+                    <img src="../assets/test.png" alt="github">
+                </a>
+            </div>
+
+        </div>
+    </div>  
+
 </template>
+
+<style scoped>
+    .page{
+        margin-top: 20px;
+        margin-bottom: auto;
+        background-color: lightgray;
+        height:auto;
+        min-height:800px;
+        width:auto;
+        border-radius: 20px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 8px 4px 2px 1px rgba(0,0,0,.2);
+    }
+    .container{
+        max-width:900px;
+
+    }
+    .head{
+        margin-top:50px;
+        margin-bottom:50px;
+        font-size:48px;
+        font-weight:200;
+        color: rgba(53,56,57);
+        padding:4px;
+        display:flex;
+        justify-content: center;
+    
+    }
+    .text{
+        margin-bottom:50px;
+        font-size:24px;
+        color: rgba(65,74,76);
+        display:flex;
+        justify-content: center;
+        width:auto;
+        
+    }
+    .about-us{
+        display:flex;
+        font-size:26px;
+        color: rgba(53,56,57);
+        gap:99px;
+    }
+    .Pictures{
+        width:auto;
+        display:flex;
+        justify-content: space-between;
+    
+    }
+    img{
+        transition: transform .25s;
+        box-shadow: 8px 4px 2px 1px rgba(0,0,0,.2);
+        margin-bottom:25px;
+
+    }
+    img:hover {
+        transform:scale(1.5);
+
+    }
+    .about-text {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:space-between;
+        width:auto;
+        font-size:26px;
+    }
+    .github{
+        display:flex;
+        justify-content: end;
+        align-items: end;
+        width:auto;
+
+    }
+</style>
