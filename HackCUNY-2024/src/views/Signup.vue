@@ -39,8 +39,7 @@ const Google = () =>{
 </script>
 
 
-<style>
-
+<style scoped>
 .sign-up-container, .account-info, .button-container {
     display: flex;
     flex-direction: column;
@@ -48,7 +47,7 @@ const Google = () =>{
 }
 
 .sign-up-container{
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .account-info {
@@ -69,11 +68,4 @@ button {
     border-radius: 15px;
     cursor: pointer;
 }
-
-
-
-
-
-
-
 </style>

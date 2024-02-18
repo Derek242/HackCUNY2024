@@ -2,7 +2,7 @@
     <aside class="sidebar">
         <div>
             <img src="" alt="" class ="home-image"/>
-            <router-link to = "/home"> </router-link>       
+            <router-link to = "/home"> Home</router-link>       
         </div>
         <div>
             <img src="" alt="" class ="about-image"/>
@@ -41,7 +41,7 @@
     padding: 2%;
     position: fixed;
     left: 0;
-    top: 0;
+    top: 80px;
     bottom: 0;
     --sidebar-width: 50px;
     color: white;

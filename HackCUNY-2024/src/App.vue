@@ -1,5 +1,5 @@
 <script setup>
-import Navbar from './components/Navbar.vue'
+import TopBar from './components/TopBar.vue'
 import SideBar from './components/SideBar.vue'
 import { handleError, ref, toHandlerKey, onMounted } from 'vue'
 import axios from 'axios'
@@ -23,7 +23,7 @@ const count = ref(0)
 
 <template>
   <div id="app">
-    <Navbar/>
+    <TopBar/>
     <SideBar/>
     <router-view/>
   </div>
@@ -72,10 +72,11 @@ export default {
 
 <style scoped>
 
+
 #app{
   margin-top: auto;
-  background-color: black;
   margin-left: var(--sidebar-width + 2%);
+
 }
 
 </style>
