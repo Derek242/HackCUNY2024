@@ -1,6 +1,10 @@
 <template>
     <aside class="sidebar">
         <div>
+            <img src="" alt="" class ="home-image"/>
+            <router-link to = "/home"> </router-link>       
+        </div>
+        <div>
             <img src="" alt="" class ="about-image"/>
             <router-link to = "/about"> About</router-link>
         </div>
@@ -34,18 +38,18 @@
 
 .sidebar {
     background-color: gray;
-    padding: 5%;
+    padding: 2%;
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
-    width: 100px;
+    --sidebar-width: 50px;
     color: white;
 }
 
 .sidebar div{
-    margin-bottom: 100%;
-    margin-top: 100%;
+    margin-bottom: 50%;
+    margin-top: 50%;
     border-bottom: 1px solid white;    
     overflow: hidden;
     color: white;
@@ -57,8 +61,9 @@
     text-align: center;
     color: white;
     display: block;
-    font-size: 100%;
-    padding: 25%;
+    font-size: 75%;
+    padding: 10%;
+    justify-content: center;
 
     
 }

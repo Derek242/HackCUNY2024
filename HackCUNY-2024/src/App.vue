@@ -71,62 +71,11 @@ export default {
 
 
 <style scoped>
-header {
-  margin-bottom: 20px;
-  display: block;
-  justify-content: space-between;
-  padding: 20px;
-  display: flex;
-}
-.Logo, .Login{
-  
+
+#app{
+  margin-top: auto;
+  background-color: black;
+  margin-left: var(--sidebar-width + 2%);
 }
 
-.Logo img, .Login img {
-  max-width: 25%;
-  height: auto;
-  margin-right: 25%;
-}
-
-
-.navbar {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-}
-
-.navbar li {
-  cursor: pointer;
-  margin-right: 20px;
-}
-.sidebar {
-  width: 100px;
-  background-color: #333;
-  color: white;
-  padding: 20px;
-}
-
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.sidebar li {
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-.content {
-  flex: 1;
-  padding: 20px;
-}
 </style>

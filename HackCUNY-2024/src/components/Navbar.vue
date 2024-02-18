@@ -1,46 +1,35 @@
 <template>
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="brand">
       <router-link to="/">
-        <img src="../assets/4fingers.png">
+        <img src="">
       </router-link>
     </div>
     <div class="login">
       <router-link to = "/sign-in"> Login</router-link>
     </div>
-  </nav>
+  </nav> -->
 </template>
 
-<style scoped>
+<!-- <style scoped>
 .navbar {
   display: flex;
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar a{
-  color: #555;
-}
-
-.navbar a:hover {
-  color: green;
-}
-
-.navbar .brand, .navbar .login{
+  background-color: #333;
+  color: white;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
   align-items: center;
-
-  justify-content: center;
-  padding: 0px 10px;
 }
 
-
-
-.navbar .nav {
-  list-style: none;
+.brand {
+  margin-left: auto;
 }
 
-.navbar .nav li {
-  display: inline-block;
-  padding: 15px 15px;
+.login{
+  margin-right: auto;
 }
-</style>
+
+</style> -->
