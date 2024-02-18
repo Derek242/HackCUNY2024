@@ -118,6 +118,8 @@
         justify-content: end;
         align-items: end;
         width: 100px;
+        text-align: center;
+        display: flex;
   
     }
 </style>
