@@ -15,7 +15,7 @@
 
 <script setup>
 import { ref} from "vue";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword,GoogleAuthProvider,signInWithPopup } from "firebase/auth";
 import { useRouter } from 'vue-router'
 
 const email = ref("");
@@ -28,7 +28,7 @@ const login = () => {
     signInWithEmailAndPassword(auth,email.value,password.value)
     .then((data)=>{
         console.log("Successful")
-        console.log(auth.currentUser)
+        router.push('/home')
     })
     .catch((error)=>{
         console.log(error)

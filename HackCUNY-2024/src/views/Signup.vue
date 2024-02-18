@@ -27,6 +27,7 @@ const reg = () => {
     createUserWithEmailAndPassword(getAuth(), email.value,password.value)
     .then((data)=>{
         console.log("Successful");
+        router.push('/home')
     })
     .catch((error)=> {
         console.log(error.code);
