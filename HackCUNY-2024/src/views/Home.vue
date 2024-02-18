@@ -64,20 +64,17 @@ template {
     display: flex;
     flex-direction: row;
     position: relative; 
-    width: 570px; 
-    height: 260px; 
+    width: 670px; 
+    height: 460px; 
     overflow: hidden; 
     background-color: #cdcdcd; 
-    top: 5vh;
-    left: 25vh;
     justify-content: space-between;
     align-items: center;
-    
 } 
   
 .carousel-item .slide-image { 
-    width: 570px; 
-    height: 260px; 
+    width: 670px; 
+    height: 460px; 
     background-size: cover; 
     background-repeat: no-repeat; 
 } 
@@ -99,22 +96,7 @@ template {
 .carousel-item div { 
     height: 100%; 
 } 
-  
-.red { 
-    background-color: red; 
-} 
-  
-.green { 
-    background-color: green; 
-} 
-  
-.yellow { 
-    background-color: yellow; 
-} 
-  
-.violet { 
-    background-color: violet; 
-}
+
 
 /*Button */
 button {
@@ -122,11 +104,6 @@ button {
     height: 50px;
 }
 
-body {
-    margin-left: 50px;
-    margin-top: 80px;
-    margin-left: 50px;
-    height: 1000px;
-}
+
 
 </style>

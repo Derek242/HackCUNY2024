@@ -65,12 +65,10 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 
-
-#app{
-  margin-top: auto;
-  margin-left: var(--sidebar-width + 2%);
+body {
+  margin: 0 0 0 20vh;
 
 }
 
