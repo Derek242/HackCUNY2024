@@ -2,14 +2,38 @@
   <div class="topBar">
     <div class="brand">
       <img class="logo" src="../assets/pngwing.com.png" alt="logo"/>
-      <h1 class="title">Automobile Search</h1>
+      <h1 class="title">Car Search</h1>
+      <button @click="handleSignOut" v-if="log">Sifffffffffffffffffffffgn Out</button>
    </div>
   </div>
 </template>
-
+<script>
+  import {ref, onMounted } from 'vue'
+  import { useRouter} from 'vue-router'
+  import { getAuth,onAuthStateChanged, signOut} from "firebase/auth";
+  const router = useRouter();
+  const log = ref(false);
+  let auth;
+  onMounted(()=>{
+    auth = getAuth();
+    onAuthStateChanged(auth, (user)=>{
+    console.log("test");
+    if(user){
+      log.value=true;
+    }else{
+      log.value=false;
+    } 
+  });
+})
+const handleSignOut = () =>{
+  signOut(auth).then(()=>{
+    router.push("/");
+  });
+}
+const count = ref(0)
+</script>
 
 <style>
-
 .topBar {
     background-color: #C0B283;
     border-bottom: solid;
@@ -20,7 +44,9 @@
     height: 12vh;
     z-index: 200;
 }
-
+button{
+  z-index:100%;
+}
 .brand {
   display: flex;
   flex-direction: row;

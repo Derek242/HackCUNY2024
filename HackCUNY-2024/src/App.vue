@@ -3,26 +3,26 @@ import TopBar from './components/TopBar.vue'
 import SideBar from './components/SideBar.vue'
 import { handleError, ref, toHandlerKey, onMounted } from 'vue'
 import axios from 'axios'
-import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth'
-import { useRouter} from "vue-router"
-const router = useRouter();
-const log = ref(false);
-let auth;
-onMounted(()=>{
-  auth = getAuth();
-  onAuthStateChanged(auth, (user)=>{
-    if(user){
-      log.value=true;
-    }else{
-      log.value=false;
-    } 
-  });
-});
-const handleSignOut = () =>{
-  signOut(auth).then(()=>{
-    router.push("/");
-  });
-}
+// import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth'
+// import { useRouter} from "vue-router"
+// const router = useRouter();
+// const log = ref(false);
+// let auth;
+// onMounted(()=>{
+//   auth = getAuth();
+//   onAuthStateChanged(auth, (user)=>{
+//     if(user){
+//       log.value=true;
+//     }else{
+//       log.value=false;
+//     } 
+//   });
+// });
+// const handleSignOut = () =>{
+//   signOut(auth).then(()=>{
+//     router.push("/");
+//   });
+// }
 const count = ref(0)
 </script>
 

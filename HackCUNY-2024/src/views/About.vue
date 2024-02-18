@@ -64,7 +64,6 @@
     margin-top: 20px;
     margin-left: 4.5%;
     margin-bottom: auto;
-    background-color: lightgray;
     height:auto;
     min-height:800px;
     width:auto;
