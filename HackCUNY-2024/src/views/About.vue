@@ -1,11 +1,11 @@
 <template>
   <div class="page">
-    <div class="sections">
-      <h2 onclick="toggleAnswer(this)"> 
-        <span class = "dropdown-btn">▶</span> What is this About?
+    <div class="sections" :class="{ active: isOpen}">
+      <h2 @click="toggleAnswer"> What is this About?
+      <span class = "dropdown-btn" :class="{ rotated: isOpen }">▼</span> 
       </h2>
-      <p class="answer"> 
-
+      <p class="answer" v-show="isOpen"> 
+          Yes
       </p>
     </div>
   </div>
@@ -31,3 +31,20 @@
 
   
 </style>
+
+
+<script>
+export default {
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  methods: {
+    toggleAnswer() {
+      this.isOpen = !this.isOpen;
+    },
+  },
+};
+</script>
+
