@@ -14,7 +14,7 @@
       <ul class = "nobulletpoint">
           <li v-for="(car,i) in cardata" :key="i">
             <div class = car-card>
-              Model: {{ car.model }}<br/>
+            Model: {{ car.model }}<br/>
               City_mgp: {{ car.city_mpg }}<br/>
               Combination_mpg: {{ car.combination_mpg }}<br/>
               Company: {{ car.make }}<br/>

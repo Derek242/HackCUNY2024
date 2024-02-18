@@ -35,8 +35,9 @@
       <p class="answer" v-show="challengesSectionOpen"> 
           Over the course of this Project, there were a bunch of issues and roadblocks, especially since this was our first Hackathon and our
           first time using Vue+Vite. The learning curve associated with these technologies, combined with the constraints 
-          posed by team members' prior commitments, significantly slowed down our progress. Despite these difficulties, our team persevered, 
-          demonstrating resilience and determination in navigating through unfamiliar territory. ...
+          posed by team members' prior commitments, significantly slowed down our progress. Another difficulty we have faced was trying to find 
+          some sort of car API, funny enough setting up Google firebase oauth was easier than finding and implementing a car API.
+          Despite these difficulties, our team persevered, demonstrating resilience and determination in navigating through unfamiliar territory. 
 
       </p>
     </div>
@@ -47,8 +48,11 @@
       </h2>
       <p class="answer" v-show="goalsSectionOpen"> 
           Due to the limited time constraints and learning issues. We couldn't get much done. However, we hope 
-          to expand more on the user login features such as being able to favorite cars. ...
-
+          to expand more on the user login features such as being able to favorite cars, and more filters to support the user experience.
+          Also, adding some sort of recommendation car based on small information given by the user, images added to each of the cars 
+          during the car search, to make searching and browsing cars much easier, we would like to add some sort of AI chatbox
+          that give car recommendations based on the user's preferences, and finally we would also like to expand on our website designs maybe adding
+          more user interactivity, services, etc.
       </p>
     </div>
   </div>  
