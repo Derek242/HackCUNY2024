@@ -29,7 +29,7 @@
     </div>
 
     <div class="challanges-sections" :class="{ active: challengesSectionOpen}">
-      <h2 @click="toggleAnswer('challanges')"> What were the Challanges?
+      <h2 @click="toggleAnswer('challenges')"> What were the Challanges?
       <span class = "dropdown-btn" :class="{ rotated: challengesSectionOpen }">▼</span> 
       </h2>
       <p class="answer" v-show="challengesSectionOpen"> 
