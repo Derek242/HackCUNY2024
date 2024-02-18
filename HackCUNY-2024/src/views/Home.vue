@@ -20,7 +20,7 @@
         ],
         activeIndex: 0,
         intervalId: null,
-        slideDuration: 2500 // Adjusted slide duration to 2.5 seconds (2500 milliseconds)
+        slideDuration: 3000 // Adjusted slide duration to 2.5 seconds (2500 milliseconds)
       };
     },
     mounted() {
@@ -68,8 +68,8 @@ template {
     height: 260px; 
     overflow: hidden; 
     background-color: #cdcdcd; 
-    top: 30px;
-    left: 100px;
+    top: 5vh;
+    left: 25vh;
     justify-content: space-between;
     align-items: center;
     
