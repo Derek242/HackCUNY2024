@@ -63,9 +63,7 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    margin-top: 10vh;
-}
+    justify-content: center; /* Center items vertically */}
 
 
 .sidebar a {
