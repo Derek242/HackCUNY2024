@@ -1,28 +1,35 @@
 <template>
     <aside class="sidebar">
         <div>
-            <img src="" alt="" class ="home-image"/>
-            <router-link to = "/home"> Home</router-link>       
+            <router-link to = "/home"> 
+                <img src="../assets/home.png" alt="" class ="home-image"/>
+                Home
+            </router-link>       
         </div>
         <div>
-            <img src="" alt="" class ="about-image"/>
-            <router-link to = "/about"> About</router-link>
+
+            <router-link to = "/about"> 
+                <img src="../assets/paper.png" alt="" class ="about-image"/> 
+                About
+            </router-link>
         </div>
         <div>
-            <img src="" alt="" class ="contact=image"/>
-            <router-link to = "/contact"> Contact</router-link>
+            <router-link to = "/contact"> 
+                <img src="../assets/contact.png" alt="" class ="contact-image"/>
+                Contact
+            </router-link>
         </div>
         <div>
-            <img src="" alt="" class ="questions=image"/>
-            <router-link to = "/questions"> Questions</router-link>
+            <router-link to = "/sign-up"> 
+                <img src="../assets/signup.png" alt="" class ="register-image"/>
+                Register
+            </router-link>
         </div>
         <div>
-            <img src="" alt="" class ="register-image"/>
-            <router-link to = "/sign-up"> Register</router-link>
-        </div>
-        <div>
-            <img src="" alt="" class ="login-image"/>
-            <router-link to = "/sign-in"> Login</router-link>
+            <router-link to = "/sign-in"> 
+                <img src="../assets/login.png" alt="" class ="login-image"/>
+                Login
+            </router-link>
         </div>
     </aside>
 </template>
@@ -33,7 +40,6 @@
 
 #aside{
     display: flex;
-    flex: column;
 }
 
 .sidebar {
@@ -45,33 +51,54 @@
     bottom: 0;
     --sidebar-width: 50px;
     color: white;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .sidebar div{
-    margin-bottom: 50%;
-    margin-top: 50%;
     border-bottom: 1px solid white;    
     overflow: hidden;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin-top: 10vh;
 }
 
 
 .sidebar a {
-    text-decoration: none;
+    /* text-decoration: none;
     text-align: center;
     color: white;
     display: block;
     font-size: 75%;
     padding: 10%;
     justify-content: center;
+    display: block; */
+
+text-decoration: none;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  font-size: 75%;
 
     
 }
 
-.about-image, .contact-image, .questions-image, .register-image, .login-image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 25%;
+.about-image, .contact-image, .home-image, .register-image, .login-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 15vh; 
+    height: 15vh; 
+    z-index: 100%;
+    max-width: 20vh;
+
 }
 
 </style>
