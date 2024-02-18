@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class ="too">
     <input type="text" id="car-name" v-model=carmake @keyup.enter="fetchdata" @input="cardata" placeholder = "Car Company" >
 
@@ -17,9 +17,6 @@
             Highway_mpg: {{ car.highway_mpg }}<br/>
             Transmission: {{ car.transmission }}<br/>
             Year: {{ car.year }}<br/>
-            
-            <a :href="('https://www.google.com/search?q=')" target = "_blank" >
-            test</a>
           </p>
 
         </li>
@@ -36,7 +33,6 @@ export default {
     return {
       carmake: '',
       cardata: this.cardata,
-      url: 'https://www.google.com/search?q=',
     };
   },
   methods: {
@@ -58,7 +54,7 @@ export default {
 
 
 <style>
-  .too{
+.too{
     margin-left:100px;
     margin-top:150px;
     display:flex;
@@ -66,4 +62,4 @@ export default {
     text-align:center;
     justify-content: center;
   }
-</style>
+</style> -->
