@@ -3,30 +3,34 @@ import TopBar from './components/TopBar.vue'
 import SideBar from './components/SideBar.vue'
 import { handleError, ref, toHandlerKey, onMounted } from 'vue'
 import axios from 'axios'
-// import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth'
-// import { useRouter} from "vue-router"
-// const router = useRouter();
-// const log = ref(false);
-// let auth;
-// onMounted(()=>{
-//   auth = getAuth();
-//   onAuthStateChanged(auth, (user)=>{
-//     if(user){
-//       log.value=true;
-//     }else{
-//       log.value=false;
-//     } 
-//   });
-// });
-// const handleSignOut = () =>{
-//   signOut(auth).then(()=>{
-//     router.push("/");
-//   });
-// }
+import { getAuth, onAuthStateChanged, signOut} from 'firebase/auth'
+import { useRouter} from "vue-router"
+const router = useRouter();
+const log = ref(false);
+let auth;
+onMounted(()=>{
+  auth = getAuth();
+  onAuthStateChanged(auth, (user)=>{
+    if(user){
+      
+      log.value=true;
+    }else{
+      log.value=false;
+    } 
+  });
+});
+const handleSignOut = () =>{
+  signOut(auth).then(()=>{
+    router.push("/home");
+  });
+}
 const count = ref(0)
 </script>
 
 <template>
+  <div class ="signoutbutton">
+    <button @click="handleSignOut" v-if="log">Sign Out</button>
+</div>
   <div id="app">
     <TopBar/>
     <SideBar/>
@@ -71,5 +75,9 @@ body {
   margin: 0 0 0 20vh;
   background-color: #DCD0C0;
 }
-
+  .signoutbutton {
+    z-index:200%;
+    position:fixed;
+    left:0;
+  }
 </style>
