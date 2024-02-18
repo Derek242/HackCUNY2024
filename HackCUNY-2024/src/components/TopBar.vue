@@ -1,7 +1,9 @@
 <template>
   <div class="topBar">
     <div class="brand">
+    <a href="../home">
       <img class="logo" src="../assets/pngwing.com.png" alt="logo"/>
+    </a>
       <h1 class="title">Car Search</h1>
    </div>
   </div>
