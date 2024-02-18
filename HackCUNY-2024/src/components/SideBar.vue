@@ -49,11 +49,11 @@
     left: 0;
     top: 80px;
     bottom: 0;
-    --sidebar-width: 50px;
+    width: 20vh;
     color: white;
     display: flex;
     flex-direction: column;
-
+    z-index: 200px;
 }
 
 .sidebar div{
