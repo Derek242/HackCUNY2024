@@ -11,13 +11,13 @@
 <style>
 
 .topBar {
-    background-color: gray;
+    background-color: #C0B283;
     border-bottom: solid;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 13vh;
+    height: 12vh;
     z-index: 200;
 }
 
@@ -36,7 +36,7 @@
   width: 12vh;
   height: 9vh;
   margin-right: 30px;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 7px;
 }
 

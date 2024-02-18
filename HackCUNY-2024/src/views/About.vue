@@ -47,7 +47,6 @@
     .page{
         margin-top: 20px;
         margin-bottom: auto;
-        background-color: lightgray;
         height:auto;
         min-height:800px;
         width:auto;
