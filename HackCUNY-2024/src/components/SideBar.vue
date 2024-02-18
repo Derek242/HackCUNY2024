@@ -2,32 +2,32 @@
     <aside class="sidebar">
         <div>
             <router-link to = "/home"> 
-                <img src="../assets/home.png" alt="" class ="home-image"/>
+                <img src="../assets/Sidebar/home.png" alt="" class ="home-image"/>
                 Home
             </router-link>       
         </div>
         <div>
 
             <router-link to = "/about"> 
-                <img src="../assets/paper.png" alt="" class ="about-image"/> 
+                <img src="../assets/Sidebar/paper.png" alt="" class ="about-image"/> 
                 About
             </router-link>
         </div>
         <div>
             <router-link to = "/contact"> 
-                <img src="../assets/contact.png" alt="" class ="contact-image"/>
+                <img src="../assets/Sidebar/contact.png" alt="" class ="contact-image"/>
                 Contact
             </router-link>
         </div>
         <div>
             <router-link to = "/sign-up"> 
-                <img src="../assets/signup.png" alt="" class ="register-image"/>
+                <img src="../assets/Sidebar/signup.png" alt="" class ="register-image"/>
                 Register
             </router-link>
         </div>
         <div>
             <router-link to = "/sign-in"> 
-                <img src="../assets/login.png" alt="" class ="login-image"/>
+                <img src="../assets/Sidebar/login.png" alt="" class ="login-image"/>
                 Login
             </router-link>
         </div>

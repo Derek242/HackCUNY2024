@@ -138,8 +138,8 @@ template {
     display: flex;
     flex-direction: row;
     position: relative; 
-    width: 670px; 
-    height: 460px; 
+    width: 195vh; 
+    height: 100vh; 
     overflow: hidden; 
     background-color: #cdcdcd; 
     justify-content: space-between;
@@ -147,8 +147,8 @@ template {
 } 
   
 .carousel-item .slide-image { 
-    width: 670px; 
-    height: 460px; 
+    width: 195vh; 
+    height: 100vh; 
     background-size: cover; 
     background-repeat: no-repeat; 
 } 
@@ -164,7 +164,7 @@ template {
   
 .carousel-item.active { 
     left: 0; 
-    transition: all 0.3s ease-out; 
+    transition: all 0.5s ease-out; 
 } 
   
 .carousel-item div { 
@@ -176,7 +176,11 @@ template {
 button {
     position: relative;
     height: 50px;
+    opacity: 0.6;
+    border: none;
+    font-size: larger;
 }
+
 
 
 
