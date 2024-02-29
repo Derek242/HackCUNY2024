@@ -9,6 +9,7 @@ const router = useRouter();
 const log = ref(false);
 let auth;
 
+
 onMounted(()=>{
   auth = getAuth();
   onAuthStateChanged(auth, (user)=>{
